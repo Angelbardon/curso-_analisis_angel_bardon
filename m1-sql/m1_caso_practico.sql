@@ -64,3 +64,48 @@ INSERT INTO `m1_caso_practico`.`usuarios` (`nif`, `email`, `fecha_alta`, `codigo
 INSERT INTO `m1_caso_practico`.`prestamos` (`id_libro`, `id_usuario`, `fecha_inicio`, `fecha_fin`, `recargo`) VALUES ('3', '1', '2023-03-10', '2023-04-15', '2.50');
 INSERT INTO `m1_caso_practico`.`prestamos` (`id_libro`, `id_usuario`, `fecha_inicio`, `fecha_fin`, `recargo`) VALUES ('2', '3', '2023-04-01', '2023-04-10', '0.00');
 INSERT INTO `m1_caso_practico`.`prestamos` (`id_libro`, `id_usuario`, `fecha_inicio`, `fecha_fin`, `recargo`) VALUES ('2', '4', '2023-04-07', '2023-04-17', '0.00');
+
+
+select * from autores;
+-- autores
+-- select por titulo like
+-- select count por año de nacimiento
+
+-- libros
+select * from libros;
+select count(*) from libros;
+-- select por titulo like
+-- count por editorial o por categoria
+select editorial, count(*) as count_books from libros group by editorial; 
+select category, count(*) as count_books from libros group by category; 
+
+-- sum de precio por editoraial
+select editorial, sum(precio) from libros group by editorial;
+select editorial, round(avg(precio), 2) as precio_medio from libros group by editorial;
+-- avg de precio por nombre de autor
+select *
+from libros
+join autores on libros.id_autor = autores-id_autor;
+
+-- que autor tiene mas libros, max count por autor
+select autores.nombre as nombre_autor, count(*) as count_libros
+from libros
+join autores on libros.id_autor = autores.id_autor group by autores.nombre;
+
+-- max o avg por num_paginas
+
+-- usuarios 
+-- count de altas mes
+-- count por codigo postal
+
+-- prestamos
+select * from prestamos;
+select sum(recargos) from prestamos;
+select sum(recargos) from prestamos group by id_usuario;
+-- count por mes
+-- sum recargo
+-- max sum recargos group by user
+-- avg (cauount por usuario) group by year
+-- count por autor
+
+
