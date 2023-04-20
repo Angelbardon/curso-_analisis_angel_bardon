@@ -10,3 +10,11 @@ print('rosa' in names)
 
 for name in names:
     print(name)
+    
+ # for numero in range   
+for num in range(100):
+    print(num)   
+    
+ # 
+for num in range(50, 100, 2):
+    print(num)   
