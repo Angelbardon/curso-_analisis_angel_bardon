@@ -24,6 +24,4 @@ print('Es mayor de edad ') if edad >= 18 else print('Es menor de edad')
       
       # if elif else pera multiples casos
 
-altura = 180
-if altura >= 160 and altura <= 170:
-          
+    
