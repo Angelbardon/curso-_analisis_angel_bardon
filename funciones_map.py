@@ -9,3 +9,14 @@ for price in prices:
     
 print(prices_iva)
     
+ 
+ 
+  
+prices = [10, 20, 30, 40, 50]
+
+sumar_el_iva = lambda prices : prices * 1.21
+
+resultado_total = list (map(sumar_el_iva, prices))
+
+print (resultado_total)
+
