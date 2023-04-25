@@ -11,11 +11,13 @@ class Ordenador:
         self.estado = True
         
     def aplicar_descuento(self, descuento):
-        if (descuento > 0 and descuento < 0.9)
-        self.precio = self.precio = self.precio * descuento
+        if (descuento > 0 and descuento < 0.9):
+            self.precio = self.precio = self.precio * descuento
         
-    ordenador1 = Ordenador("Asus", "A55A",2008, 495 )
-    ordenador1.precio *= 0.9
+        
+        
+ordenador1 = Ordenador("Asus", "A55A",2008, 495 )
+ordenador1.precio *= 0.9
     
     
       
