@@ -98,10 +98,15 @@ select * from detalle_pedidos;
 
 select apellido from clientes order by apellido;
 
-select stock from productos where stock < 10;
+select  nombre, descripcion , stock from productos where stock < 10;
+
 
 select count(*) from pedidos;
 select  count(*)  from pedidos group by id_cliente = 3;
+
+ # mostrar total de ventas (precio * cantidad) por cada pedido
+
+ 
 
 
 
