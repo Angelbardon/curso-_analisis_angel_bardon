@@ -96,12 +96,23 @@ select * from productos;
 select * from pedidos;
 select * from detalle_pedidos;
 
+
+
+-- Mostrar clientes ordenados alfebéticamente por apellidos
 select apellido from clientes order by apellido;
 
-select stock from productos where stock < 10;
+-- Mostrar todos los productos con un stock inferior a 10
+select  nombre, descripcion , stock from productos where stock < 10;
 
+-- Mostrar todos los pedidos realizados por un cliente específico (por id_cliente)
 select count(*) from pedidos;
 select  count(*)  from pedidos group by id_cliente = 3;
+
+ -- mostrar total de ventas (precio * cantidad) por cada pedido
+
+
+-- Mostrar el pedido con la mayor cantidad de productos diferentes
+
 
 
 
