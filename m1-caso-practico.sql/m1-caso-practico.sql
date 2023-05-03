@@ -109,6 +109,10 @@ select count(*) from pedidos;
 select  count(*)  from pedidos group by id_cliente = 3;
 
  -- mostrar total de ventas (precio * cantidad) por cada pedido
+select dp.id_pedido, SUM(p.precio * dp.cantidad) as total_ventas
+from productos p
+inner join detalle_pedidos dp on p.id_producto = dp.id_producto
+group by dp.id_pedido;
 
 
 -- Mostrar el pedido con la mayor cantidad de productos diferentes
