@@ -36,10 +36,24 @@ class TravelDatabase:
         
     def update(self, travel):
         
-        current.city_from = travel.city_from
-        current.price = travel.price
+        for current_travel in self.travels:
+            if current_travel.id == travel.id
+                current_travel.city_from = travel.city_from
+                current_travel.city_to = travel.city_to
+                current_travel.passengers = travel.passengers
+                current_travel.price = travel.price
+                return True
+            
+        return False
         
-        for current.city_from in self.travels:
-            if current.
-        
-        
+       
+    def delete_by_id(self, id)
+    
+        for travel in self.travels
+            if travel.id == id:
+                self.travels.remove (travel)
+                
+            
+ 
+
+    
