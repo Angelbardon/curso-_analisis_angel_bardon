@@ -41,4 +41,30 @@ leer de consola leer datos para crear incendios, filtrar, ect.
 que el app inserte datos demo en el arranque
  
 """
-    
+
+ 
+
+# Crear 1 objeto TravelDatabase
+from travel_database import TravelDatabase 
+travel_database = TravelDatabase()
+
+# Crear 5 objetos Travel utilizando el constructor
+from travel import Travel
+travel1 = Travel(id=None, city_from= 'Madrid', city_to= 'Barcelona', price=123.21, passengers=2)
+
+# Crear los objetos Travel en TravelDatabase utilizando el constructor
+travel_database.save(travel1)
+
+# Probar metodos find
+travels = travel_database.find_all()
+print(f"Longitud {len(travels)}")
+print(f"Viaje 1: {travels[0]}")
+print(f"Viaje 2: {travels[1]}")
+
+print("=============== FIND BY ID =============")
+
+
+# Probar metodo update
+
+# Probar delete y deleteall
+print("==================== DELETE BY ID ===============")
