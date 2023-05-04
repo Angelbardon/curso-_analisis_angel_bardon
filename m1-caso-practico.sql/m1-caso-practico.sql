@@ -116,7 +116,8 @@ group by dp.id_pedido;
 
 
 -- Mostrar el pedido con la mayor cantidad de productos diferentes
-
+select id_pedido, sum(id_producto) as cantidad_productos  from detalle_pedidos
+group by id_pedido having cantidad_productos > 0;
 
 
 
