@@ -3,6 +3,8 @@
 
 import datetime
 
+
+
 from fire_database import FireDatabase
 fire_database = FireDatabase()
 
@@ -19,4 +21,8 @@ fire4 = Fire(id=None, "Avenida de la Paz", "Leganes", 1, datetime.date(2023, 2, 
 fire5 = Fire(id=None, "calle luna", "Madrid", 4, datetime.date(2023, 2, 10), datetime.date(2023, 2, 10), None, "por determinar")
 
 
-
+fire_database.save(fire1)
+fire_database.save(fire2)
+fire_database.save(fire3)
+fire_database.save(fire4)
+fire_database.save(fire5)
