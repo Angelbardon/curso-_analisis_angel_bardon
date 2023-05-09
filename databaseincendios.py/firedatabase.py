@@ -68,6 +68,8 @@ class FireDatabase:
             
     def delete_all(self):
         self.fires = []        
+           
+           
                    
                 
                    
