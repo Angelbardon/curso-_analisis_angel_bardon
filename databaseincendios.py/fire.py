@@ -1,4 +1,4 @@
-import datetime
+
 class Fire:
     def __init__(self, id, street, province, level, date_from, date_to, active, cause):
         self.id = id

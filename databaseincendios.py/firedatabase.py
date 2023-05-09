@@ -1,24 +1,25 @@
 class FireDatabase:
     def __init__(self):
-        self.fires = []
+        self.database = []
         
     def find_all(self):
-        return self.fires.copy()
+        return self.database.copy()
     
     def find_by_id(self, id):
-        for fire in self.fires:
+        for fire in self.database:
             if fire.id == id:
-                return fire  
+                return fire 
+        return None     
             
     def find_by_active(self, active):
-        for fire in self.fires:
+        for fire in self.database:
             if fire.active == active:
                 return fire
             
         return None    
         
     def find_by_cause(self, cause):
-        for fire in self.cause:
+        for fire in self.database:
             if fire.cause == cause:
                 return fire
             
@@ -28,7 +29,7 @@ class FireDatabase:
     def find_all_by_fire(self, active, cause):
         filtered_fires = []
         
-        for fire in self.fires:
+        for fire in self.database:
             if fire.active == active and fire.cause == cause:
                 filtered_fires.append(fire)
         return filtered_fires
@@ -46,7 +47,7 @@ class FireDatabase:
         self.fires.append(fire)
         
     def update(self, fire):
-        for current_fire in self.fires:
+        for current_fire in self.database:
             if current_fire.id == fire.id:
                 current_fire.street = fire.street
                 current_fire.province = fire.province
