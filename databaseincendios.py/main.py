@@ -2,10 +2,13 @@
 
 
 
-from firedatabase import FireDatabase
-firedatabase = FireDatabase
+from fire import FireDatabase
 
 from fire import Fire
+
+fire_database = FireDatabase()
+
+
 
 fire1 = Fire(id=None, street="calle Olvido", province="Madrid", level=4, data_from= (2022, 12, 11), data_to=(4, 2022, 1,1 ),active= " ",cause= "cortocircuito") 
 
@@ -17,14 +20,14 @@ fire4 = Fire(id=None, street="Avenida de la Paz", province="Guadalajara", level=
 
 fire5 = Fire(id=None, street="Km.35 n-II", province="Madrid", level=4, data_from=(2023, 3, 10), data_to=(2023, 3, 11), active=None, cause="por determinar")
 
-firedatabase.save(fire1)
-firedatabase.save(fire2)
-firedatabase.save(fire3)
-firedatabase.save(fire4)
-firedatabase.save(fire5)
+fire_database.save(fire1)
+fire_database.save(fire2)
+fire_database.save(fire3)
+fire_database.save(fire4)
+fire_database.save(fire5)
 
 
 print("================= FIND ALL=================")
-fire = firedatabase.find_all()
+fire = fire_database.find_all()
 print(f"Longitud {len(fire1)}")
-print(f"fire1; {Fire[0]}")
+print(f"fire1; {Fire[1]}")
