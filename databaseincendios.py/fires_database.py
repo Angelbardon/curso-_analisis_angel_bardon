@@ -1,3 +1,4 @@
+
 class FireDatabase:
     def __init__(self):
         self.fires = []
@@ -36,10 +37,8 @@ class FireDatabase:
     
     def save(self, fire):
         
-        id_maximo = 0
-        for current_fire in self.fires:
-            if current_fire.id > id_maximo:
-                id_maximo = current_fire.id
+        id_maximo = max([fire.id for fire in self.fires], default = 0)
+        
                 
 
         fire.id = id_maximo + 1
