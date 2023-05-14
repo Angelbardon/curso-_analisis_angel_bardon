@@ -1,9 +1,5 @@
-
-
-
-
-from fire import FireDatabase, Fire
-
+from fire import Fire
+from firesdatabase import FireDatabase
 
 
 fire_db = FireDatabase()
@@ -25,7 +21,4 @@ fire_db.save(fire2)
 fire_db.save(fire3)
 fire_db.save(fire4)
 fire_db.save(fire5)
-
-
-print("================= FIND ALL=================")
 
