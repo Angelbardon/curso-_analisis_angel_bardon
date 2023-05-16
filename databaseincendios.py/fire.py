@@ -12,7 +12,7 @@ class Fire:
     def __str__(self):
         return f"{self.id} {self.street} {self.province} {self.level} {self.date_from} {self.date_to} {self.active} {self.cause}"
     def __repr__(self):
-        return f"{self.id} {self.street} {self.province} {self.level} {self.date_from} {self.date_to} {self.active} {self.cause}"
+        return self.__str__()
         
 
 

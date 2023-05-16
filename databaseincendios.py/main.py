@@ -1,11 +1,7 @@
 
 from fire import Fire
 from firesdatabase import FireDatabase
-
-
 fire_db = FireDatabase()
-
-
 
 fire1 = Fire(id=None, street="calle Olvido", province="Madrid", level=4, data_from= (2022, 12, 11), data_to=(4, 2022, 1,1 ),active= " ",cause= "cortocircuito") 
 
@@ -23,3 +19,5 @@ fire_db.save(fire3)
 fire_db.save(fire4)
 fire_db.save(fire5)
 
+Fires = FireDatabase.find_all()
+print(fire_db)
