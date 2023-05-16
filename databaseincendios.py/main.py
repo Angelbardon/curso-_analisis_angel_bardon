@@ -1,3 +1,4 @@
+
 from fire import Fire
 from firesdatabase import FireDatabase
 
