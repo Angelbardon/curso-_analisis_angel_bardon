@@ -1,3 +1,4 @@
+
 class FireDatabase:
     def __init__(self):
         self.fires = []
@@ -5,25 +6,28 @@ class FireDatabase:
     def find_all(self):
         return self.fires.copy()
     
-    def find_by_id(self, id):
+    def find_by_id(self, fire_id):
         for fire in self.fires:
-            if fire.id == id:
+            if fire.id == fire_id:
                 return fire 
         return None     
             
     def find_by_active(self, active):
+        filtered_fires = []
         for fire in self.fires:
             if fire.active == active:
-                return fire
+                filtered_fires.append(fire)
+                return filtered_fires
             
         return None    
         
     def find_by_cause(self, cause):
+        filtered_fires = []
         for fire in self.fires:
             if fire.cause == cause:
-                return fire
+                filtered_fires.append(fire)
+                return filtered_fires
             
-        return None
             
             
     def find_all_by_fire(self, active, cause):
@@ -36,14 +40,8 @@ class FireDatabase:
     
     def save(self, fire):
         
-        id_maximo = 0
-        for current_fire in self.fires:
-            if current_fire.id > id_maximo:
-                id_maximo = current_fire.id
-                
-
+        id_maximo = max([fire.id for fire in self.fires], default = 0)
         fire.id = id_maximo + 1
-        
         self.fires.append(fire)
         
     def update(self, fire):
@@ -60,9 +58,9 @@ class FireDatabase:
             
         return False
     
-    def delete_by_id(self, id):
+    def delete_by_id(self, fire_id):
         for fire in self.fires:
-            if fire.id == id:
+            if fire.id == fire_id:
                 self.fires.remove(fire)
                 break
             
