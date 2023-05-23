@@ -9,10 +9,24 @@ class Fire:
         self.date_to = date_to
         self.active = active
         self.cause = cause
+
     def __str__(self):
         return f"{self.id} {self.street} {self.province} {self.level} {self.date_from} {self.date_to} {self.active} {self.cause}"
-    def __repr__(self):
-        return self.__str__()
+    
+        
+    
+     
+
+
+ 
+    
+
+    
+    
+    
+
+
+
         
 
 
