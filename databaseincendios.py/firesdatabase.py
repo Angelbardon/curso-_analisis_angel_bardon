@@ -17,7 +17,7 @@ class FireDatabase:
         for fire in self.fires:
             if fire.active == active:
                 filtered_fires.append(fire)
-                return filtered_fires
+        return filtered_fires
             
         return None    
         
@@ -26,7 +26,7 @@ class FireDatabase:
         for fire in self.fires:
             if fire.cause == cause:
                 filtered_fires.append(fire)
-                return filtered_fires
+        return filtered_fires
             
             
             
