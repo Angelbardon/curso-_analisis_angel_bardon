@@ -22,5 +22,7 @@ fire_db.save(fire3)
 fire_db.save(fire4)
 fire_db.save(fire5)
 
-Fire = FireDatabase.find_all()
+fires = fire_db.find_all()
+
+
 
